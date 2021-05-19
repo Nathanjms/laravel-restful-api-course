@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\PetitionCollection;
 use App\Models\Petition;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class PetitionController extends Controller
      */
     public function index()
     {
-        //
+        return new PetitionCollection(Petition::all());
     }
 
     /**
