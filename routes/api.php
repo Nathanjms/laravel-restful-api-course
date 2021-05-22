@@ -23,5 +23,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('/petitions', PetitionController::class);
 
 Route::resource('/authors', AuthorController::class)->only([
-    'index, show'
+    'index', 'show'
 ]);
